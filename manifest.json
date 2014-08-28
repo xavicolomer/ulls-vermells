@@ -1,9 +1,8 @@
 {
     "manifest_version": 2,
-    "version": 1,
     "name": "Ulls Vermells - Mapa de Calor",
     "description": "Aquesta extensió canvia el color de les gràfiques seguint un mapa de calor.",
-    "version": "1.0",
+    "version": "1.4",
     "browser_action": {
         "default_icon": "icon.png"
     },
@@ -13,5 +12,9 @@
     ],    
     "background": {
         "scripts": ["background.js"]
-    }
+    },
+    "content_scripts": [{
+        "matches":["http://ullsvermells.com/topic/via2014"],
+        "css": ["table.css"] 
+    }]
 }

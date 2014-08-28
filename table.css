@@ -1,0 +1,31 @@
+#summary
+{
+    height: 400px;
+    width: 560px;
+    font-size: 14px;
+}
+
+.uv-header td
+{
+    font-weight: bold;
+}
+
+.number 
+{
+    text-align: center;
+}
+
+.uv-bottom
+{
+    border-top: 1px solid #D8D8D8;
+}
+
+.uv-odd
+{
+    background: #F5F5F5;
+}
+
+.tram
+{
+    padding-left: 20px;
+}
