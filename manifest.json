@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Ulls Vermells - Mapa de Calor",
     "description": "Aquesta extensió canvia el color de les gràfiques seguint un mapa de calor.",
-    "version": "1.4",
+    "version": "1.4.1",
     "browser_action": {
         "default_icon": "icon.png"
     },

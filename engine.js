@@ -1,26 +1,28 @@
+var count, min, max, html, initial, temp, i;
+
 colors = ['#40AC17','#91C034', '#DDDD13', '#FFaa00', '#FF5500', '#ff0000'];
 stages = ['1750','3500', '5250', '7000', '8750', '10500'];
 titles = ['Baixa','Poca', 'Mitja', 'Alta', 'Quasi Plena', 'Plena'];
 
-var count = 0;
+count = 0;
 jQuery('#chart .nv-series-0').children('g').each(function(){ 
     jQuery(this).attr('style','fill:' + colors[count] + ';');
     count = count + 1;
 })
 
-var count = 0;
+count = 0;
 jQuery('#chartcomarca2').find('.nv-group').each(function(){ 
     jQuery(this).attr('style','fill:' + colors[count] + ';');
     count = count + 1;
 })
 
-var count = 0;
+count = 0;
 jQuery('#chartcomarca2').find('.nv-legend-symbol').each(function(){ 
     jQuery(this).attr('style','fill:' + colors[count] + ';');
     count = count + 1;
 })
 
-var temp = [];
+temp = [];
 jQuery('#chart .nv-series-0').children('g').each(function(){ 
     title = jQuery(this).children('text').html();
     num = title.split(' (')[0];
@@ -30,14 +32,14 @@ jQuery('#chart .nv-series-0').children('g').each(function(){
 jQuery('#chart').css('width', 470);
 jQuery('#chart').css('float', 'left');
 
-var min = 0;
-var max = 0;
-var html = '<table id="summary">';
+min = 0;
+max = 0;
+html = '<table id="summary">';
 html += '<tr class="uv-header"><td class="tram">Quantitat de Gent</td><td class="number">Pessimista</td><td class="number">Mitja</td><td class="number">Optimista</td></tr>';
 
-for (var i = 0; i < stages.length; ++i )
+for (i = 0; i < stages.length; ++i )
 {
-    var initial = 0;
+    initial = 0;
     if (i != 0)
         initial += temp[i]*stages[i-1];
     
@@ -52,9 +54,6 @@ for (var i = 0; i < stages.length; ++i )
 }
 
 html += '<tr class="uv-bottom"><td  class="tram">Total</td><td class="number">'+min+'</td><td class="number">'+((min+max)*0.5)+'</td><td class="number">'+max+'</td></tr>';
-
 html += '</table>';
-
-console.log(min, max);
 
 jQuery("#chart").after(html);
