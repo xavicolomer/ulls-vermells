@@ -56,4 +56,5 @@ for (i = 0; i < stages.length; ++i )
 html += '<tr class="uv-bottom"><td  class="tram">Total</td><td class="number">'+min+'</td><td class="number">'+((min+max)*0.5)+'</td><td class="number">'+max+'</td></tr>';
 html += '</table>';
 
+jQuery("#summary").remove();
 jQuery("#chart").after(html);
